@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-20T08:08:49-03:00",
+  "environment": "Python 3.12 local Windows; standard library",
+  "command": "python -m unittest discover -s tests -v",
+  "local_tests_passed": 14,
+  "sales_tests": 6,
+  "new_serialization_tests": 8,
+  "service_integration_executed": false,
+  "public_origin": "https://community.databricks.com/t5/data-engineering/zerobus-variant-data-not-processed-as-expected-json-data/m-p/173977#M56790"
+}

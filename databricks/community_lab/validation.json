@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-18T11:33:08-03:00",
+  "environment": {
+    "python": "3.12",
+    "spark": "3.5.3",
+    "java": "17",
+    "timezone": "UTC",
+    "ansi": true,
+    "execution": "local Windows JVM"
+  },
+  "command": "python -m unittest discover -s databricks/community_lab -p 'test_*.py' -v",
+  "result": {
+    "passed": 10,
+    "failed": 0,
+    "seconds": 10.202
+  },
+  "scope": "Four SQL snippets against synthetic temporary views; no Databricks/Delta/Kafka/AWS integration.",
+  "previous_suite": {
+    "passed": 6,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "existing_cdc_suite": {
+    "passed": 8,
+    "evidence": "docs/validacao-cdc.txt",
+    "rerun_this_change": false
+  },
+  "warnings": [
+    "Hadoop native Windows binaries not available; built-in Java used",
+    "PySpark socket ResourceWarning observed; assertions passed"
+  ],
+  "sha256": {
+    "queries\\business_key_hash.sql": "de469080afb164b66db77c9c07752aea7c25f738d66bbb7f65f5de75a2285bf3",
+    "queries\\hourly_change_counts.sql": "e8cf6919919dcf93fe742daf2780ebe07d8564960d0e268976a34f0bc2a41acf",
+    "queries\\normalized_merge_collisions.sql": "a2265b44f419b17c9b6bd6df8303c7fc87abe04cf64892b5cca86fe36fe2d6cd",
+    "queries\\optional_operation_metrics.sql": "744544a723839edae4674cd8eeb43a9a93162f46d1f4683fa8774f17c4298393",
+    "test_community_sql.py": "5452059b1946257d669fe9e83bfc37d399b83791de106e29e9c7f73c0b753021"
+  }
+}

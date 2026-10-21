@@ -1,0 +1,51 @@
+name: Test examples
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+  spark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: python -m pip install -r pyspark/day_001_cdc/requirements.txt
+      - run: python -m unittest discover -s pyspark/day_001_cdc -p 'test_*.py' -v
+        env:
+          SPARK_LOCAL_IP: 127.0.0.1
+      - run: python -m unittest discover -s databricks/community_lab -p 'test_*.py' -v
+        env:
+          SPARK_LOCAL_IP: 127.0.0.1
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s sql/day_002_join_cardinality -p 'test_*.py' -v
+      - run: python -m unittest discover -s airflow/day_001_freshness_contract -p 'test_*.py' -v
+  s3-replay-simulation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r aws/day_001_replay/requirements.txt
+      - run: python -m unittest discover -s aws/day_001_replay -v

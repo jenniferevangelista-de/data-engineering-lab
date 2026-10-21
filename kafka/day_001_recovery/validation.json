@@ -1,0 +1,25 @@
+{
+  "scope": "REAL_LOCAL_KAFKA_BROKER",
+  "topic": "jenny-recovery-2effc69956f7",
+  "group": "jenny-consumer-2effc69956f7",
+  "acknowledged_offsets": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "processed_offsets": [
+    0,
+    1,
+    1,
+    2,
+    3
+  ],
+  "committed_before_restart": 1,
+  "committed_after_restart": 4,
+  "unique_sink_events": 3,
+  "duplicate_deliveries_suppressed": 2,
+  "status": "PASS",
+  "broker_version": "Apache Kafka 3.9.1 (Java 17, single KRaft node)",
+  "verified_date": "2026-10-21"
+}
