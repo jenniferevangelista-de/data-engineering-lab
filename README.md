@@ -17,8 +17,9 @@ cardinalidade de JOIN e freshness. Validação local e em CI com dados sintétic
 | [Contrato de freshness](airflow/day_001_freshness_contract/README.md) | Separa sucesso da execução e atualidade dos dados, verificando intervalo, timestamps, contagem e qualidade antes de liberar o resultado. | 11 testes de funções Python; nenhum scheduler Airflow ou serviço externo foi executado. |
 | [Replay S3](aws/day_001_replay/README.md) | Reenvia o mesmo lote sem sobrescrever um conteúdo diferente. | 7 testes com Moto; execução AWS real pendente. |
 | [Kafka: retomada](kafka/day_001_recovery/README.md) | Confirma entregas e retoma após interrupção sem duplicar efeitos no SQLite. | Broker Kafka 3.9.1 real local; quatro mensagens confirmadas e três eventos únicos. |
+| [Carga por data de negócio](python/business_date_gate/README.md) | Impede que um backfill de outra data libere a carga diária; preserva as execuções que autorizaram a publicação e evita repetir a mesma gravação local. | 25 testes Python/SQLite, incluindo concorrência e rollback. Sem execução em Databricks. |
 
-**São 58 testes: 6 de vendas + 8 de CDC + 10 de SQL Community + 8 de JSON + 8 de JOIN + 11 de freshness + 7 de replay S3/Moto.**
+**São 83 testes: 6 de vendas + 8 de CDC + 10 de SQL Community + 8 de JSON + 8 de JOIN + 11 de freshness + 7 de replay S3/Moto + 25 de data de negócio.**
 O experimento Kafka é uma integração separada dessa contagem.
 
 [Ver as execuções e o resultado de cada versão no GitHub](https://github.com/jenniferevangelista-de/data-engineering-lab/actions/workflows/tests.yml?query=branch%3Amain)
