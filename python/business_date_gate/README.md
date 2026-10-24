@@ -4,6 +4,8 @@ A backfill can run today while processing an older business date. This Python
 and SQLite example requires the exact upstream jobs to succeed for an explicit
 business date before publishing a synthetic daily total.
 
+Artigo relacionado: [A business-date gate for daily loads](https://medium.com/@jenniferevangelista.code/a-business-date-gate-for-daily-loads-bc2d45c8f31f).
+
 ## Run
 
 Python 3.12+, standard library only. From the repository root:
