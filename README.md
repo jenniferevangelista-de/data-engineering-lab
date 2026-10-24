@@ -36,6 +36,7 @@ O experimento Kafka é uma integração separada dessa contagem.
 | [Unity Catalog Row Filters and Column Masks](https://medium.com/@jenniferevangelista.code/unity-catalog-row-filters-and-column-masks-a-fail-closed-security-design-you-can-test-d3e3b25e0ab0) | [Community lab](databricks/community_lab/README.md) | O lab contém SQL sintético em Spark local; políticas de Unity Catalog ainda não foram executadas em Databricks. |
 | [Your SQL Join Passed the Row-Count Check. Revenue Was Still Wrong.](https://medium.com/@jenniferevangelista.code/your-sql-join-passed-the-row-count-check-revenue-was-still-wrong-84d6ff448745) | [Lab de cardinalidade de JOIN](sql/day_002_join_cardinality/README.md) | Oito testes SQLite com dados sintéticos; sem benchmark Spark/Databricks. |
 | [Your Airflow DAG Is Green. Your Data Is From Yesterday.](https://medium.com/@jenniferevangelista.code/your-airflow-dag-is-green-your-data-is-from-yesterday-caefcac73db2) | [Contrato de freshness](airflow/day_001_freshness_contract/README.md) | Onze testes de funções Python; sem execução de scheduler Airflow. |
+| [A business-date gate for daily loads](https://medium.com/@jenniferevangelista.code/a-business-date-gate-for-daily-loads-bc2d45c8f31f) | [Carga por data de negócio](python/business_date_gate/README.md) | 25 testes Python/SQLite, incluindo concorrência e rollback; sem integração Databricks. |
 
 ## O que ainda falta
 
