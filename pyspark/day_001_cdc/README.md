@@ -1,7 +1,7 @@
 # Dia 001 — contrato determinístico de CDC antes do MERGE
 
 Dados sintéticos; Spark local real, sem credenciais AWS ou workspace Databricks.
-Python 3.12, PySpark 3.5.3 e Java 17. Não pressupõe equivalência com DBR.
+Python 3.12, PySpark 3.5.8 e Java 17. Não pressupõe equivalência com DBR.
 
 ## Artigo relacionado
 
@@ -13,7 +13,8 @@ python -m pip install -r pyspark/day_001_cdc/requirements.txt
 python -m unittest discover -s pyspark/day_001_cdc -p 'test_*.py' -v
 ```
 No Windows, defina JAVA_HOME para Java 17 e SPARK_LOCAL_IP=127.0.0.1 se
-o hostname não resolver. Consulte a evidência em docs/validacao-cdc.txt.
+o hostname não resolver. Consulte a [revalidação com Spark 3.5.8](../../docs/validation-security-2026-10-24.json).
+O registro em `docs/validacao-cdc.txt` preserva a execução histórica com Spark 3.5.3.
 
 Entrada: key STRING, sequence BIGINT, value STRING. A sequência deve ser a
 versão do produtor, comparável dentro de cada chave; não use hora de chegada.

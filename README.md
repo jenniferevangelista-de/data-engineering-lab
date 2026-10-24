@@ -23,7 +23,8 @@ cardinalidade de JOIN e freshness. Validação local e em CI com dados sintétic
 O experimento Kafka é uma integração separada dessa contagem.
 
 [Ver as execuções e o resultado de cada versão no GitHub](https://github.com/jenniferevangelista-de/data-engineering-lab/actions/workflows/tests.yml?query=branch%3Amain)
-· [Ver o registro dos testes da Community](databricks/community_lab/validation.json)
+· [Ver a revalidação com Spark 3.5.8](docs/validation-security-2026-10-24.json)
+· [Ver o registro histórico dos testes da Community](databricks/community_lab/validation.json)
 
 
 ## Artigos no Medium e exemplos relacionados
@@ -55,7 +56,7 @@ Os exemplos de vendas e serialização JSON requerem Python 3.12 ou superior:
 python -m unittest discover -s tests -v
 ```
 
-Os exemplos com Spark também precisam de Java 17 e PySpark 3.5.3. Os passos estão
+Os exemplos com Spark também precisam de Java 17 e PySpark 3.5.8. Os passos estão
 no [guia de PySpark](pyspark/day_001_cdc/README.md) e no
 [guia dos exemplos da Community](databricks/community_lab/README.md).
 
