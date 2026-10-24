@@ -10,3 +10,4 @@ Usar `day_NNN_assunto/` com README, código, dados sintéticos e testes.
 Registrar no diário o comando, versões, resultado esperado e evidências.
 Separar testes locais ou simulados da validação real no serviço.
 
+Segundo exemplo: [Dia 002 — comparar payloads de CDC por hash canônico](day_002_payload_hash/README.md).
