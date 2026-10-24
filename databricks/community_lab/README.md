@@ -1,7 +1,7 @@
 # Databricks Community → exemplos reproduzíveis
 
 Quatro recortes técnicos das contribuições de Jennifer Evangelista na Community,
-com SQL executável e dados sintéticos. A validação usa **Apache Spark 3.5.3 local,
+com SQL executável e dados sintéticos. A validação usa **Apache Spark 3.5.8 local,
 Python 3.12 e Java 17**, com timezone UTC e ANSI habilitado.
 
 Os testes verificam os resultados desses recortes. Não estabelecem que o problema
@@ -33,8 +33,9 @@ e encerra a sessão Spark. As consultas ficam em [queries/](queries/).
 
 São dez testes: fronteiras de componentes, posição de NULL, payload canônico,
 normalização/filtro, chaves únicas, espaços não normalizados, preimage, horas e
-operações desconhecidas, métricas ausentes e zero medido. A evidência da execução
-fica em [validation.json](validation.json).
+operações desconhecidas, métricas ausentes e zero medido. A revalidação com Spark
+3.5.8 fica em [validation-security-2026-10-24.json](../../docs/validation-security-2026-10-24.json).
+O registro histórico com Spark 3.5.3 permanece em [validation.json](validation.json).
 
 O exemplo existente de [preparação de CDC](../../pyspark/day_001_cdc/README.md)
 complementa o diagnóstico de MERGE: oito testes de normalização, ordenação,
