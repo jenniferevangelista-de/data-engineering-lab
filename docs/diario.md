@@ -46,3 +46,12 @@
 - Result: 10 tests passed in 17.3 s. Socket ResourceWarnings were observed; the assertions passed.
 - Findings: a float with noise produces a false conflict when hashed raw and stops doing so after rounding; a column outside the list does not change the hash; NULL and the empty string differ; column order changes the hash.
 - Not yet run: CI with Python 3.12 and Java 17; Delta MERGE, Databricks and nested types in `to_json`. Local time is not a benchmark.
+
+## 2026-10-24 — PySpark Day 003 (Delta publication)
+- Idempotent publication with a Delta control table and the evidence in the target commit's `userMetadata`, based on a suggestion in the article comments.
+- Local environment: Linux, Python 3.13, PySpark/Spark 3.5.8, delta-spark 3.3.2, OpenJDK 21; synthetic data; real local JVM. No Databricks.
+- Command: `python -m unittest discover -s pyspark/day_003_delta_publication -p 'test_*.py' -v`.
+- Result: 10 tests passed in 226.6 s. The concurrency test was also run alone three times (three rounds each) and passed every time.
+- Probe: with two sessions running the same insert-only MERGE, one committed and the other got `ConcurrentAppendException` in 6 of 6 rounds, for the insert-only and the matched-clause variants. Small sample, default isolation level.
+- Findings: `userMetadata` via session setting is session-scoped; a MERGE cannot raise on its own; crash windows are recovered through the PENDING state.
+- Not yet run: CI with Python 3.12 and Java 17; Databricks; log-retention behavior; real multi-node writers. Local time is not a benchmark.

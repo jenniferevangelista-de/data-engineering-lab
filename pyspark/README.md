@@ -11,3 +11,5 @@ Registrar no diário o comando, versões, resultado esperado e evidências.
 Separar testes locais ou simulados da validação real no serviço.
 
 Second example: [Day 002 — comparing CDC payloads with a canonical hash](day_002_payload_hash/README.md).
+
+Third example: [Day 003 — idempotent publication on local Delta](day_003_delta_publication/README.md).
