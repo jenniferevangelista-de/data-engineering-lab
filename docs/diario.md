@@ -39,10 +39,10 @@
 - Avisos locais de winutils/Hadoop, sockets e limpeza de processos Spark já encerrados foram registrados; as asserções e códigos de saída passaram. O tempo local não é benchmark.
 - Sem chamadas reais a AWS, Databricks, Delta ou Kafka; nenhum publicador ou reenvio de competição foi executado.
 
-## 2026-10-24 — PySpark Dia 002 (hash de payload)
-- Comparação de payloads de CDC por `sha2(to_json(struct(...)), 256)` sobre colunas explícitas, a partir de uma sugestão nos comentários do artigo.
-- Ambiente local: Linux, Python 3.13, PySpark/Spark 3.5.8, OpenJDK 21; dados sintéticos; JVM local real.
-- Comando: `python -m unittest discover -s pyspark/day_002_payload_hash -p 'test_*.py' -v`.
-- Resultado: 10 testes passaram em 17,3 s. Avisos de ResourceWarning de sockets foram observados; as asserções passaram.
-- Achados: float com ruído gera falso conflito se hasheado cru e deixa de gerar após arredondar; coluna fora da lista não altera o hash; NULL e string vazia diferem; a ordem das colunas altera o hash.
-- Ainda não executado: a CI com Python 3.12 e Java 17; Delta MERGE, Databricks e tipos aninhados em `to_json`. O tempo local não é benchmark.
+## 2026-10-24 — PySpark Day 002 (payload hash)
+- Comparing CDC payloads with `sha2(to_json(struct(...)), 256)` over explicit columns, based on a suggestion in the article comments.
+- Local environment: Linux, Python 3.13, PySpark/Spark 3.5.8, OpenJDK 21; synthetic data; real local JVM.
+- Command: `python -m unittest discover -s pyspark/day_002_payload_hash -p 'test_*.py' -v`.
+- Result: 10 tests passed in 17.3 s. Socket ResourceWarnings were observed; the assertions passed.
+- Findings: a float with noise produces a false conflict when hashed raw and stops doing so after rounding; a column outside the list does not change the hash; NULL and the empty string differ; column order changes the hash.
+- Not yet run: CI with Python 3.12 and Java 17; Delta MERGE, Databricks and nested types in `to_json`. Local time is not a benchmark.
