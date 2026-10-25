@@ -59,7 +59,7 @@ Os exemplos com Spark também precisam de Java 17 e PySpark 3.5.3. Os passos est
 no [guia de PySpark](pyspark/day_001_cdc/README.md) e no
 [guia dos exemplos da Community](databricks/community_lab/README.md).
 
-Consulte o [diário de validação](docs/diario.md) e as
+Consulte o [guia de validação](docs/validation.md) e as
 [instruções para contribuir](CONTRIBUTING.md) para os detalhes técnicos.
 
 ## License
