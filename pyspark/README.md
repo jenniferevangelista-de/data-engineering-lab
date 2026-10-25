@@ -7,6 +7,6 @@ Inclui oito testes com Spark local real, dependências fixadas e limites de inte
 Spark e Java compatíveis; fixar versões, criar sessão local e encerrá-la no teste.
 
 Usar `day_NNN_assunto/` com README, código, dados sintéticos e testes.
-Registrar no diário o comando, versões, resultado esperado e evidências.
+Documentar no README do exemplo os comandos, versões, resultados esperados e limites de validação.
 Separar testes locais ou simulados da validação real no serviço.
 

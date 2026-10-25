@@ -13,7 +13,7 @@ python -m pip install -r pyspark/day_001_cdc/requirements.txt
 python -m unittest discover -s pyspark/day_001_cdc -p 'test_*.py' -v
 ```
 No Windows, defina JAVA_HOME para Java 17 e SPARK_LOCAL_IP=127.0.0.1 se
-o hostname não resolver. Consulte a [revalidação com Spark 3.5.8](../../docs/validation-security-2026-10-24.json).
+o hostname não resolver. Consulte o [guia de validação](../../docs/validation.md).
 O registro em `docs/validacao-cdc.txt` preserva a execução histórica com Spark 3.5.3.
 
 Entrada: key STRING, sequence BIGINT, value STRING. A sequência deve ser a
