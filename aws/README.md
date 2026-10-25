@@ -8,7 +8,7 @@ de um sandbox autenticado; os testes simulados não comprovam execução no S3.
 Conta de sandbox; região e recursos explícitos; credenciais fora do código; estimar custos e documentar limpeza.
 
 Usar `day_NNN_assunto/` com README, código, dados sintéticos e testes.
-Registrar no diário o comando, versões, resultado esperado e evidências.
+Documentar no README do exemplo os comandos, versões, resultados esperados e limites de validação.
 Separar testes locais ou simulados da validação real no serviço.
 
 
