@@ -9,7 +9,7 @@ duplicaram os efeitos no SQLite. Não valida queda do broker, réplicas ou produ
 Broker de teste; tópicos isolados; declarar versão do cliente; testar duplicação, chave e confirmação de entrega.
 
 Usar `day_NNN_assunto/` com README, código, dados sintéticos e testes.
-Registrar no diário o comando, versões, resultado esperado e evidências.
+Documentar no README do exemplo os comandos, versões, resultados esperados e limites de validação.
 Separar testes locais ou simulados da validação real no serviço.
 
 
