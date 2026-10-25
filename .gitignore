@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Internal operational records
+/docs/diario.md
+/docs/validation-security-*.json

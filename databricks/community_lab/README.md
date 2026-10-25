@@ -33,8 +33,8 @@ e encerra a sessão Spark. As consultas ficam em [queries/](queries/).
 
 São dez testes: fronteiras de componentes, posição de NULL, payload canônico,
 normalização/filtro, chaves únicas, espaços não normalizados, preimage, horas e
-operações desconhecidas, métricas ausentes e zero medido. A revalidação com Spark
-3.5.8 fica em [validation-security-2026-10-24.json](../../docs/validation-security-2026-10-24.json).
+operações desconhecidas, métricas ausentes e zero medido. O [guia de validação](../../docs/validation.md) registra o escopo, os comandos
+e a distinção entre resultados históricos e novas execuções.
 O registro histórico com Spark 3.5.3 permanece em [validation.json](validation.json).
 
 O exemplo existente de [preparação de CDC](../../pyspark/day_001_cdc/README.md)
