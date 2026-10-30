@@ -18,6 +18,7 @@ cardinalidade de JOIN e freshness. Validação local e em CI com dados sintétic
 | [Replay S3](aws/day_001_replay/README.md) | Reenvia o mesmo lote sem sobrescrever um conteúdo diferente. | 7 testes com Moto; execução AWS real pendente. |
 | [Kafka: retomada](kafka/day_001_recovery/README.md) | Confirma entregas e retoma após interrupção sem duplicar efeitos no SQLite. | Broker Kafka 3.9.1 real local; quatro mensagens confirmadas e três eventos únicos. |
 | [Carga por data de negócio](python/business_date_gate/README.md) | Impede que um backfill de outra data libere a carga diária; preserva as execuções que autorizaram a publicação e evita repetir a mesma gravação local. | 25 testes Python/SQLite, incluindo concorrência e rollback. Sem execução em Databricks. |
+| [Correções de consumo](python/billing_corrections/README.md) | Explica como uma reversão negativa e um registro corrigido mudam a soma do consumo. | Guia sem arquivos executáveis; referência privada com 19 testes Python locais em 24/10/2026. Não entra nos 83 testes públicos. |
 
 **São 83 testes: 6 de vendas + 8 de CDC + 10 de SQL Community + 8 de JSON + 8 de JOIN + 11 de freshness + 7 de replay S3/Moto + 25 de data de negócio.**
 O experimento Kafka é uma integração separada dessa contagem.
@@ -70,4 +71,3 @@ copyright 2026 Jennifer Evangelista. The `.gitignore` template from
 [github/gitignore](https://github.com/github/gitignore) retains its
 [CC0-1.0 terms](https://github.com/github/gitignore/blob/main/LICENSE).
 External dependencies and linked third-party materials retain their own terms.
-
