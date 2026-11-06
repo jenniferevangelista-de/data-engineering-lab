@@ -5,6 +5,10 @@ Laboratório público de engenharia de dados de **Jennifer Evangelista**.
 Exemplos reproduzíveis de Python, SQL e PySpark para qualidade de dados, CDC,
 cardinalidade de JOIN e freshness. Validação local e em CI com dados sintéticos.
 
+## Simulação de corrida de DNS
+
+[Executar o exemplo e os 12 testes](aws/day_002_dns_race/README.md). Modelo Python com dados sintéticos, sem chamadas à AWS. A suíte está incluída no workflow; consulte o resultado da execução para esta versão. Estes 12 casos são adicionais à contagem histórica abaixo.
+
 ## Laboratórios
 
 | Entrega | O que faz, em linguagem simples | O que já foi conferido |
